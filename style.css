@@ -1,0 +1,741 @@
+﻿*, :after, :before {
+    box-sizing: inherit;
+}
+:focus {outline:none!important;}
+::selection {
+    background-color: #211510;
+    color: #fff;
+}
+::-webkit-scrollbar-track
+{
+	border-radius: 0px;
+	background-color: #050405;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #17621a;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 0px;
+	background-color: #17621a;
+}
+    /* Animations */
+@keyframes pulse_animation {
+	0% { width:100px; }
+	50% { width:75px; }
+	100% { width:100px; }
+}
+.pulse {
+	animation-name: pulse_animation;
+	animation-duration: 3000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+body{
+	background-color: #050405;
+    xcolor: #b3a18c;
+    xolor:#ebdec2;
+	    color: #797e75;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-shadow: #000000 1px 1px 3px;
+	padding:0px;
+	margin:0px;
+	}
+	h1,h2,h3,ul{margin:0px;padding:0px;}
+a {
+    color: inherit;
+    text-decoration: inherit;
+    color: #26c033;
+  
+}
+	a:hover{text-decoration:underline; }
+/* Colors */
+.green{color:#7e8d09;}
+.red{color:#910d0d;}
+.blue{color:#6185aa;}
+.orange{color:#ff6d12;}
+	.errors.green {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: .5;
+}
+.errors.green:last-child {
+display:none;
+}
+.green-overlay {
+    background: rgba(116, 164, 57, 0.25);
+    outline: 1px solid #456333;
+    border: 0px!important;
+    outline-offset: -1px;
+}	
+
+button:hover{cursor:pointer;}
+button{display:none;margin: 40px 10px;
+font-weight: 400; 
+    text-shadow: none;
+    text-transform: none;
+    -webkit-transition: background .2s,color .2s;
+    transition: background .2s,color .2s;
+    padding: 25px;
+    font-size: 1em;
+    font-family: 'Proza Libre', sans-serif;}
+button.orange-button {
+    background: rgba(0,0,0,.5);
+    border: 1px solid #e5a40a;
+    color: #4f8b1d;
+    outline: 1px solid #000;
+}
+button.orange-button:hover {
+    background: rgba(229, 164, 10, 0.8);
+    color: #ffffff;
+    text-shadow: #2f2300 1px 1px 3px;
+}
+
+button.green-button {
+   background: rgba(59, 84, 27, 0.5);
+    border: 1px solid #73c343;
+    color: #4f8b1d;
+    outline: 1px solid #000;
+}
+button.green-button:hover {
+    background: rgba(115, 195, 67, 0.5);
+    color: #ffffff;
+    text-shadow: #325d18 1px 1px 3px;
+}
+
+#holder{width:100%;}
+#container{max-width:1600px;min-width:1000px;margin:0 auto;}
+
+/* header */
+#holder.header {
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+#holder.header a:hover{
+  text-decoration:none;
+}
+#container.navigation {
+    font-family: 'Proza Libre', sans-serif;
+    background: rgb(255, 255, 255) url(images/navigationbg.png) repeat-x 80px 0;
+	margin-top:50px;
+    background-size: auto 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,.6);
+}
+  #holder.header	#logo {
+    line-height: 100px;
+    color: #ff6d12;
+    font-weight: 600;
+    font-size: 20px;
+	
+}
+#holder.header	#logo img {
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+#holder.header img{float:left;}
+
+#holder.header #navigation {
+	height: 75px;
+	line-height: 75px;
+	text-transform: none;
+	letter-spacing: .5;
+	font-size: 14px;
+	color: #4f8b1d;
+}
+ #holder.header #navigation ul.right{ float: right;}
+  #holder.header #navigation ul{padding:0px;margin:0px;list-style:none;}
+#holder.header #navigation ul li{   border-left: 1px solid rgba(255, 255, 255, .05);
+    float: left;
+    border-right: 1px solid rgba(0,0,0,.5);}
+	#holder.header #navigation ul li:hover {
+    color: #26c033;
+}
+#holder.header #navigation ul li a {
+    display: block;
+    padding: 0 25px;
+    color: #17611a;
+    text-shadow: -1px -1px 0px #599922,1px 0px 0px #0e1e01;
+    font-size: 15px;
+}
+
+#holder.header #navigation ul li:hover a {
+    color: #6fbe0d;
+    text-shadow: 0px 0px 0px;
+}
+#holder.header #navigation ul li:first-child {
+}
+#holder.header #navigation ul li:before {
+
+}
+#holder.header #navigation ul li:after {
+	content: "";
+    background: rgba(21,13,9,.8);
+    left: auto;
+    right: 0;
+}
+#navigation i.fa {
+    line-height: 100px;
+    xfont-size: 25px;
+}
+/* end header */
+
+
+/* intro */
+
+#holder.intro {
+    xxbackground: url(images/bg.jpg) no-repeat center 0px;
+    xxheight: calc(100% - 7em);
+    margin-top: 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+        background: transparent;
+}
+#container.intro {
+	    overflow: auto;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000504+0,000504+100&0.3+60,1+100 */
+background: -moz-linear-gradient(top,  rgba(0,5,4,0.3) 0%, rgba(0,5,4,0.3) 60%, rgba(0,5,4,.9) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,5,4,0.3) 0%,rgba(0,5,4,0.3) 60%,rgba(0,5,4,.9) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,5,4,0.3) 0%,rgba(0,5,4,0.3) 60%,rgba(0,5,4,.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000504', endColorstr='#000504',GradientType=0 ); /* IE6-9 */
+
+
+    xheight: 100%;
+    max-width: 100%;
+}
+#intro_left {
+    float: left;
+}
+#intro_right {
+    float: right;
+        width: 30%;
+}
+#intro_right form {
+    background: rgba(0,0,0,0);
+    padding: 20px;
+    margin-top: 0;
+}
+#intro_right table {
+    width: calc(100% - 40px);
+}
+#intro_right input {
+    margin-bottom: 10px;
+    line-height: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #000000;
+    padding: 0 15px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .5;
+    font-family: 'Proza Libre', sans-serif;
+}
+#intro_right input[type=text] {
+    width: 100%;
+}
+#intro_right input[type=password] {
+    width: 100%;
+}
+
+
+#intro_right input.sbm:hover {
+    background: rgba(79, 139, 29, 0.9);
+    cursor:pointer;
+}
+#intro_right input.sbm {
+    background: rgba(79, 139, 29, 0.6);
+    border: 1px solid #4f8b1d;
+    color: #000000;
+    outline: 1px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 60px;
+    letter-spacing: 0;
+    text-shadow: -1px -1px 0px #1f4401,1px 1px 0px #4f8b1d;
+}
+    
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+xvideo#bgvid {
+    width: 100%;
+    z-index: -100;
+    margin-top: 100px;
+    left: 0;
+    position: absolute;
+}
+#introtext {
+padding-top: 275px;
+    color: #fff;
+    text-align: left;
+    max-width: 1600px;
+    min-width: 1000px;
+    margin: 0 auto;
+        overflow: auto;
+}
+#introtext h1 {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 2;
+}
+#introtext h2 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: .5;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #4f8b1d;
+    padding-left: 2px;
+}
+#realm_status {
+    background: rgba(0, 0, 0, 0.52);
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .5;
+	border: 1px solid #000;
+	    margin-top: 20px;
+}
+#website_msg {
+	margin-top:25px;
+    padding: 20px;
+    background: rgba(149,0,0,0.5);
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5;
+    border: 1px solid #a60000;
+}
+#vote_holder {
+	    text-align: left;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5;
+}
+#features {
+	 text-align: left;
+    overflow: auto;
+    clear: both;
+    max-width: 1600px;
+    min-width: 1000px;
+    margin: 50px auto;
+}
+#features h1 {
+    margin-bottom: 20px;
+    color: #4f8b1d;
+}
+#features h1.big {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Proza Libre', sans-serif;
+    letter-spacing: 1;
+    color: #4f8b1d;
+}
+ #features h2 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: .5;
+    text-transform: uppercase;
+    color: #4f8b1d;
+    padding-left: 2px;
+}
+#introtext h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-lefT: 5px;
+    color: #fdfdfd;
+    opacity: .8;
+}
+#feature_box {
+    font-size: 14px;
+    line-height: 30px;
+    width: calc(25% - 42px);
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    color: #797e75;
+    border: 1px solid #181818;
+    background: url(images/texture_light_1.html) repeat;
+    box-shadow: 0 0 6px #000, inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#feature_box img {
+    width: calc(100% + 20px);
+    margin: -10px -10px 10px;
+}
+#feature_box:hover {
+border-color: #4f8b1d;
+cursor:pointer;
+}
+
+
+/* end intro */
+/* main */
+#holder.main {
+    background-color:rgba(5, 4, 5, 0.9);
+    overflow: auto;
+}
+#container.main {
+    display: inline-block;
+    padding: 20px;
+    background: url(images/texture_light_1.html) repeat;
+    text-align: left;
+    max-width: calc(1600px - 42px);
+    min-width: calc(1000px - 40px);
+    box-shadow: 0 0 6px #000, inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/* END main */
+
+/* Content */
+
+#content {
+    float: left;
+    width: calc(100% - 400px);
+}
+#content h1.big {
+    text-align: left;
+    margin-left: 0px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Proza Libre', sans-serif;
+    letter-spacing: 1;
+    color: #4f8b1d;
+}
+#content h1 p {
+    width: 100%;
+    height: 33px;
+    background: url(images/page-title-gradient.html) no-repeat;
+    position: absolute;
+    top: 11px;
+    right: 0;
+}
+#content h1  span {
+    width: 100%;
+    height: 22px;
+    background: url(images/page-title-effect.html) no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#content-box {
+    width: calc(100% - 62px);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 10px 0px;
+    text-align: left;
+    border: 1px solid #030303;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #000, inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);
+}
+img.featured_image.small {
+    float: left;
+    width: 20%!important;
+    margin-right: 20px!important;
+    margin-bottom: -20px!important;
+}
+#content-box:hover {
+border-color: #4f8b1d;
+cursor:pointer;
+}
+#content-box img.featured_image {
+    width: calc(100% + 40px);
+    margin-top: -20px;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+#content-box h1 {
+    margin-top: 0px;
+	margin-bottom: 0px!important;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1;
+    color: #4f8b1d;
+}
+#content-box h2 {
+    margin-top: 0px;
+    font-size: 10px;
+    letter-spacing: .3;
+    font-weight: 500;
+    margin-left: 2px;
+    color: #386c0d;
+    text-transform: uppercase;
+}
+#content-box p {
+        margin-top: 10px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: .4;
+    font-weight: 500;
+}
+
+/* Content */
+#changelog {
+    font-size: 12px;
+    letter-spacing: .5;
+    line-height: 18px;
+}
+#changelog h2 {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 20px;
+    padding: 20px 20px 5px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #4f8b1d;
+    border-top: 1px solid #4b3226;
+	    overflow: auto;
+}
+
+.spacer {
+    height: 180px;
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 59.25%;
+    padding-top: 25px;
+    height: 0;
+    margin-left: -40px;
+    margin-top: -40px;
+    margin-right: -62px;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Changelog */
+#changelog {
+    font-size: 12px;
+    letter-spacing: .5;
+    line-height: 18px;
+    height: auto;
+    min-height: 40px;
+    background: url(images/texture_light_2.html) repeat;
+    box-shadow: 0 0 4px rgba(0,0,0,.6), 0 1px 1px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.015), inset 0 1px 0 rgba(255,255,255,.05);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0 0 14px 0;
+    z-index: 1;
+}
+table.changes-list {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+table.changes-list tr:nth-child(odd) {
+    background: rgba(255,255,255,.01);
+}
+table.changes-list tr {
+    padding: 8px 0;
+    display: block;
+    border-bottom: dotted 1px #090908;
+	    font-size: 12px;
+}
+table.changes-list tr td.category {
+    width: 80px;
+    padding: 0 0 0 9px;
+    font-weight: bold;
+    color: #595652;
+    border-right: dotted 1px #282623;
+}
+table.changes-list tr td.date {
+    width: 95px;
+    padding: 0 0 0 9px;
+    border-right: dotted 1px #282623;
+}
+table.changes-list tr td.info {
+    padding: 0 9px 0 9px;
+    color: #5c5955;
+}
+#changelog-msg {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: inline-block;
+    padding-left: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #8c1515;
+    font-size: 12px;
+}
+/* END Changelog */
+/* Sidebar */ 
+
+#sidebar {
+    float: right;
+    width: calc(400px - 1px);
+    margin-top: -20px;
+    margin-bottom: -20px;
+    border-left: 1px solid #201f1e;
+    margin-right: -20px;
+    border-bottom: 1px solid #201f1e;
+}
+
+#sidebar-box {
+    width: calc(100% - 40px);
+    padding: 20px;
+    xbackground: #1e140f;
+    margin: 0px;
+	background: rgba(0,0,0,0.5);
+    text-align: left;
+    xborder: 1px solid #4b3226;
+        xbox-shadow: 0 0 10px rgba(0,0,0,.6);
+}
+#sidebar-box:hover {
+border-color: #4f8b1d;
+cursor:pointer;
+}
+#sidebar-box h1 {
+    margin-top: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1;
+    color: #4f8b1d;
+	    margin-bottom: 20px;
+}
+#sidebar-box h2 {
+    margin-top: 0px;
+    font-size: 10px;
+    letter-spacing: .3;
+    font-weight: 500;
+    margin-left: 2px;
+    color: #ab958b;
+    text-transform: uppercase;
+}
+#sidebar-box p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .4;
+}
+
+/*Sidebar*/
+
+
+/* Page */
+#page {
+    width: calc(100% - 62px);
+    padding: 20px;
+    text-align: left;
+    float: left;
+}
+#page h1{text-align: left;
+    margin-left: 0px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Proza Libre', sans-serif;
+    letter-spacing: 1;
+color: #4f8b1d;}
+/* END Page */
+
+
+/* Footer */ 
+
+#holder.footer {
+    background-color:  rgb(7, 6, 5);
+    padding: 50px 0;
+    font-size: 10px;
+    color: #68655c;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 0 0;
+    letter-spacing: .5;
+}
+#container.footer #social i {
+    font-size: 30px;
+    margin: 0 10px 20px 0;
+}
+
+/* END footer */
+
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: rgb(7, 6, 5);
+}
+.se-pre-con .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.se-pre-con .inner img {
+    -webkit-animation: pulse 3s ease infinite;
+    -moz-animation: pulse 3s ease infinite;
+    animation: pulse 3s ease infinite;
+}
+	
+	
+	#holder.introv2 {
+    display: none;
+}
+}

@@ -1,0 +1,121 @@
+/*
+    Simultaneous Core Registration
+    coded by Faded - www.EmuDevs.com
+*/
+
+body{
+    background-image: url('');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+    a:visited{
+        color: #FFF;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #3377d7;
+        text-decoration: none;
+    }
+
+#header_container {
+    height:65px;
+    left:0;
+    position:fixed;
+    width:100%;
+    top:0;
+    margin: 0 auto;
+}
+
+#header{
+    line-height:60px;
+    margin:0 auto;
+    width:940px;
+    text-align:center;
+    font-size: 18px;
+}
+
+#container {
+    overflow:hidden;
+    width:500px;
+    padding-top: 180px;
+    padding-bottom: 85px;
+    margin: 0 auto;
+}
+
+#content{
+    width: 450px;
+    margin: 0 auto;
+}
+
+#footer_container {
+    bottom:0;
+    height:100px;
+    left:0;
+    position:fixed;
+    width:100%;
+}
+
+#footer {
+    line-height:60px;
+    margin:0 auto;
+    width:940px;
+    text-align:center;
+}
+
+fieldset{
+    background-color: #000;
+    opacity: 0.7;
+}
+
+input.rounded {
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 2px 2px 3px #666;
+    -webkit-box-shadow: 2px 2px 3px #666;
+    box-shadow: 2px 2px 3px #666;
+    font-size: 13px;
+    padding: 4px 7px;
+    outline: 0;
+    -webkit-appearance: none;
+    text-align: center;
+}
+    input.rounded:focus {
+        border-color: #339933;
+    }
+
+    input.rounded:hover {
+        background-color: #FAEBD7;
+    }
+
+select.rounded {
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 2px 2px 3px #666;
+    -webkit-box-shadow: 2px 2px 3px #666;
+    box-shadow: 2px 2px 3px #666;
+    font-size: 13px;
+    padding: 4px 7px;
+    outline: 0;
+    -webkit-appearance: none;
+}
+    select.rounded:focus {
+        border-color: #339933;
+    }
+    select.rounded:hover {
+        background-color: #FAEBD7;
+    }
